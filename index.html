@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketMaker Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📊 MarketMaker Pro</h1>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar for Competitions and Events -->
+            <aside id="sidebar" class="sidebar">
+                <h2>Match Selection</h2>
+                <div class="form-group">
+                    <label for="competition-select">Competition</label>
+                    <select id="competition-select" disabled>
+                        <option>Loading competitions...</option>
+                    </select>
+                </div>
+                <ul id="events-list" class="events-list">
+                    <!-- Events will be populated by JavaScript -->
+                </ul>
+            </aside>
+
+            <!-- Main content area for inputs and outputs -->
+            <main id="main-content" class="main-content">
+                <div id="welcome-message" class="placeholder">
+                    <p>Select a match from the sidebar to begin.</p>
+                </div>
+
+                <div id="event-view" class="hidden">
+                    <div class="content-grid">
+                        <!-- Left Column: Inputs & Analysis -->
+                        <div class="left-column">
+                            <div id="input-panel">
+                                <!-- Input fields will be populated by JavaScript -->
+                            </div>
+                            <div id="analysis-panel">
+                                <!-- Lambda, Supremacy, etc. will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Output Panel -->
+                        <div class="output-panel">
+                            <div class="output-header">
+                                <h2>No-Vig Derived Markets</h2>
+                                <div class="filters">
+                                    <select id="market-type-filter">
+                                        <option value="All">All Markets</option>
+                                        <option value="Main">Main Markets</option>
+                                        <option value="Goals">Goals</option>
+                                        <option value="Handicap">Handicaps</option>
+                                        <option value="Half">Half-Time</option>
+                                        <option value="Combo">Combos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="output-table-container">
+                                <!-- Output table will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
