@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchEventData() {
         const now = Math.floor(Date.now() / 1000);
         const oneWeekFromNow = now + (7 * 24 * 60 * 60);
-        const url = `https://sports-api.cloudbet.com/pub/v2/odds/events?sport=soccer&from=${now}&to=${oneWeekFromNow}&live=false&markets=soccer.match_odds&markets=soccer.total_goals&markets=soccer.both_teams_to_score&limit=500`;
+        const url = `https://sports-api.cloudbet.com/pub/v2/odds/events?sport=soccer&from=${now}&to=${oneWeekFromNow}&live=false&markets=soccer.match_odds&markets=soccer.total_goals&markets=soccer.both_teams_to_score&limit=200`;
 
         try {
             const response = await fetch(url, { headers: { 'accept': 'application/json', 'X-API-Key': API_KEY } });
@@ -465,3 +465,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     fetchEventData();
 });
+
